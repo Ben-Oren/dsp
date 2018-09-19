@@ -1,0 +1,58 @@
+COMMANDS
+
+cp $1 $2
+
+	copy first argument ($1) to second argument destination ($2)
+
+echo
+	print on the screen
+
+env
+	in command line; will give list of variables
+
+ls 	
+	list
+
+ls -l
+	extra info
+
+ls -h
+	make the size of text human readable
+
+read varname
+	
+	ask the user for input, store in variable ‘varname’
+
+read -p
+	specify prompt eg read -p ‘Username:’ uservar
+
+read -s 
+	make input silent (not print on screen)
+
+
+
+
+CRAFTING FILES
+“#!/bin/bash” is in the first line of a bash script; it indicates what program executes the code; in this case, bash.  Called a Shebang.  Spacing is important, needs to be in first cursor spot
+
+
+“./example.sh” ./ indicates current directory/path position
+
+
+VARIABLES
+
+referring to / reading variable = use a $
+
+setting variable, don’t use $, no space w/ = sign; variable=value
+
+single quotes treats every characther literally; double quotes allows variable calls inside of variables
+	
+	ex 	myvar = 7
+		echo ‘$myvar is a hard age’ -> $myvar is a hard age
+		echo “$myvar is a hard age” -> 7 is a hard age
+
+can store the output of a command inside a variable
+
+	ex 	myvar=$( ls /etc | wc -l )
+
+
