@@ -1,6 +1,6 @@
 # Statistics
 
-# Table of Contents
+## Table of Contents
 
 [1. Introduction](#section-a)  
 [2. Why We Are Using Think Stats](#section-b)  
@@ -86,14 +86,25 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Let P(I) = Probability Elvis was an identical twin
+>> Let P(F) = Prob. Elvis was fraternal twin
+>> Let M = the event of Elvis' twin being male
+
+>> Then: 	P(M | I) = 1 (because an identical twin has to be the same sex)
+>> 		P(M | F) = .5 (because a fraternal twin has a 50/50 chance at being the same gender)
+>> 		P(I | M) = (P(M | I) * P(I)) / ( (P(M | I) * P(I)) + (P(M | F) * P(F))
+
+>> Plugging everything in, 	P(I | M) = (1 * 1/300) / ((1 * 1/300) + (.5 * 1/125))
+>>				P(I | M) ~ 45.5%
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both frequentsit and Bayesian statistics try to quantify the probability of an inference based on samples of data.  Frequentists tend to take the parameters of an unknown population from which the sample is drawn as definite and unchanging, and work through techniques to whittle down the sample's probability of reflecting the underlying population parameters.  Bayesians tend to take those same parameters as probablistic and can change based on additional information.
+
+>> Another way of putting this is that Bayesian techniques typically start from what is learned and then assess the probablility of future observations or parameters, while frequentist techniques start from a hypothesis of parameters or distributions being true and then assess the probability of samples of data occuring if that hypothesis were true.  
 
 ---
 

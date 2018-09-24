@@ -20,7 +20,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > pwd - show current working directory path
+> > mkdir [name] - create directory with name [name]
+> > rmdir [name] - delete directory named [name]
+> > touch [name] - create a file named [name]
+> > rm [name] - delete file named [name] 
+> > mv [name1] [name2] - rename a file from [name1] to [name2]
+> > ls -a - list hidden files (ie files with . in front of them)
+> > cp [name1] [name2] - copy file from location [name1] to location [name2]
+> > cat - display contents of a file
+> > head/tail - display first / last ten lines of a file
 
 ---
 
@@ -35,15 +44,24 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > ls - lists the contents of a directory
+> > ls -a - lists hidden files in a directory (ie files with . in front of filename)
+> > ls -l - display the long format listing of a file
+> > ls -lh - display long format listing in human readable format
+> > ls -lah - list the long format listing of hidden files in human readable format
+> > ls -t - list the contents of a directory sorted by time
+> > ls -Glp - inhibit grouping of files, use long listing format, append file indicator to entries 
 ---
 
 ### Q3.  More List Files in Unix  
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -r - display files in reverse order
+> > ls -R - display subdirectories as well
+> > ls -u - display files by file access time
+> > ls -d - display only directories
+> > ls -m - display entries as comma separated list
 
 ---
 
@@ -51,7 +69,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs reads in data from stdin and passes it as an argument to a function.  The function is supplied when xargs is executed as an argument to xargs.  If no function is specified for xargs, it executes the function 'echo' on the stdin.  
 
- 
+> > Example of use: to find all the files in a current directory and its subdirectories, put find and its option -name as an argument to xargs; when stdin is prompted, type in "*.txt", and "*.txt" will be passed as an argument to find -name. 
 
+'''bash
+xargs find -name
+"*.txt"
+'''
